@@ -1,0 +1,152 @@
+@import "../../styles/_variables.scss";
+
+.creatives-container {
+  font-family: $font-default;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0rem;
+    & .communityNewsletter-section {
+      color: #000;
+      padding: 0rem 6rem 6rem 6rem;
+      & h1 {
+        text-align: center;
+        font-family: "Raleway";
+        padding-top: 50px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 50px;
+        color: #000000;
+      }
+      & img {
+        width: 100%;
+        height: auto;
+      }
+      & p {
+        padding-top: 2rem;
+        font-family: "Candara";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 169%;
+        color: #3a3a3a;
+      }
+    }
+    & .moodMonth-section {
+      color: #ffffff;
+      padding: 6rem 6rem;
+      width: 100%;
+      text-align: center;
+      background-color: #292929;
+      & h1 {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 43px;
+        line-height: 85px;
+      }
+      & h4 {
+        text-align: center;
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 43px;
+        padding: 0rem 0rem 0.5rem 0rem;
+      }
+      & h6 {
+        text-align: center;
+        font-family: "Candara";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 169%;
+        padding: 2rem 0rem;
+      }
+      img {
+        width: 85%;
+        height: auto;
+      }
+      & .subscribe-class {
+        text-align: center;
+        h4 {
+          padding: 6rem 0rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & a {
+          padding: 1rem;
+          background: #e62b1e;
+          text-decoration: none;
+          width: 150px;
+          height: 50px;
+          border: 1px solid transparent;
+          border-radius: 15px;
+          font-family: "Candara";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 159.5%;
+          letter-spacing: 0.02em;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background: #ffffff;
+            color: #e62b1e;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $medium) {
+  .creatives-container {
+    padding: 1rem 0rem;
+    & .container {
+      & .communityNewsletter-section {
+        padding: 0rem 1rem !important;
+        & h1 {
+          font-size: 30px;
+        }
+        & p {
+          font-size: 20px;
+          padding-top: 5px;
+        }
+      }
+      & .moodMonth-section {
+        padding: 1rem 1rem;
+        & h1 {
+          font-size: 38px;
+        }
+        & h4 {
+          font-size: 23px;
+        }
+        & h6 {
+          font-size: 18px;
+        }
+        
+      }
+      & .subscribe-class {
+        h4 {
+          padding: 3rem 0rem;
+        }
+        & a {
+          width: 120px;
+          height: 30px;
+          font-size: 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

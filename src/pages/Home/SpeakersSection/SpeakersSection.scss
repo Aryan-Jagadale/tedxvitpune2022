@@ -1,0 +1,305 @@
+@import "../../../styles/_variables";
+
+.slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.8;
+  outline: none;
+  position: relative;
+  & .slide-tittle-year {
+    left: 0;
+    display: flex;
+    bottom: 5rem;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0rem 1rem;
+    h3 {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 33px;
+      width: 80%;
+    }
+    h5 {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 95.9%;
+      padding-bottom: .5rem;
+    }
+  }
+  & .slide-img {
+    // width: 20rem;
+    margin: 0 0;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px 40px 40px 40px;
+  }
+  & .view-btn {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10;
+    padding-top: 10px;
+    height: 38px;
+    background: rgba(196, 196, 196, 0.31);
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 40px 40px;
+    transition: 0.3s;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.125em;
+
+    color: #ffffff;
+  }
+  & .view-btn:hover {
+    opacity: 1;
+    background-color: rgb(218, 218, 218);
+    color: #000;
+  }
+}
+
+.activeSlide {
+  transform: scale(1);
+  opacity: 1;
+  transition:  all 0.2s ease-in-out;
+}
+
+.arrow {
+  // background-color: rgb(0, 0, 0);
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow svg {
+  transition: color 300ms;
+}
+
+.arrow svg:hover {
+  color: #68edff;
+}
+
+.next {
+  right: 0%;
+  top: 50%;
+}
+
+.prev {
+  left: 0%;
+  top: 50%;
+}
+
+.speakers-container {
+  padding: 3rem 3rem;
+  & h2 {
+    font-family: $font-text;
+
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  & .speakers-wrapper {
+    width: 75%;
+    margin: auto auto;
+    height: 100%;
+    position: relative;
+    padding: 6rem 3rem;
+  }
+  & .single-speakers {
+    width: 100%;
+    color: white;
+    display: flex;
+    position: relative;
+
+    & .slide-single {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 2rem 20rem;
+      & .back-arrow {
+        cursor: pointer;
+        color: white;
+        transition: color 300ms;
+        position: absolute;
+        z-index: 100;
+        top: 20px;
+        left: 100px;
+      }
+      & .back-arrow:hover {
+        color: #68edff;
+      }
+      & .single-slide-container-img {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        & .single-slide-img {
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0) 51.87%,
+            rgba(0, 0, 0, 0.5) 100%
+          );
+          border-radius: 40px;
+          width: 270px;
+        }
+      }
+
+      & .slide-info-container {
+        padding-left: 2rem;
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        & h1 {
+          font-family: $font-text;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 70px;
+          font-size: 30px;
+          width: 100%;
+        }
+        & p {
+          font-family: "Candara";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 159.5%;
+          padding: 2rem 0px;
+          /* or 40px */
+
+          letter-spacing: 0.1em;
+
+          color: #ffffff;
+        }
+        & a {
+          padding: 1rem;
+          background: #e62b1e;
+          text-decoration: none;
+          width: 150px;
+          height: 50px;
+          border: 1px solid transparent;
+          border-radius: 15px;
+          font-family: "Aileron";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 159.5%;
+          letter-spacing: 0.02em;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease-in-out;
+          display: none;
+          &:hover {
+            background: #ffffff;
+            color: #e62b1e;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .speakers-container {
+    padding: 5.5rem 1.5rem;
+    & h2 {
+      padding-bottom: 1rem;
+    }
+    & .single-speakers {
+      // padding-bottom: 10rem;
+
+      & .slide-single {
+        flex-direction: column !important;
+        text-align: left;
+        margin: 0;
+        padding: 0.5rem 0px;
+        justify-content: center !important;
+        align-items: center !important;
+        & .back-arrow {
+          left: 0px !important;
+        }
+        & .single-slide-container-img {
+          width: 100% !important;
+          justify-content: center;
+          & .single-slide-img {
+            width: 20rem !important;
+            border-radius: 10px !important;
+          }
+        }
+        & .slide-info-container {
+          width: 100% !important;
+          display: flex !important;
+          justify-content: left !important;
+          align-items: left !important;
+
+          & single-slide-container-imgh1 {
+            font-size: 3.5rem;
+          }
+          & p {
+            font-size: 1.5rem;
+          }
+          & a {
+            width: 120px;
+            height: 30px;
+            font-size: 10px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    & .sm-padding {
+      margin-bottom: 2rem;
+    }
+  }
+  .speakers-wrapper {
+    width: 100% !important;
+    padding: 0px !important;
+    padding-bottom: 10px;
+    // text-align: center;
+    & .slick-slider {
+      width: 100% !important;
+    }
+    h2 {
+      text-align: center;
+    }
+    & .slide {
+      width: fit-content !important;
+      display: flex !important;
+      justify-self: center;
+      align-self: center;
+      margin: auto auto;
+      & .slide-img {
+        width: 20rem;
+      }
+      & .view-btn {
+        width: 20rem;
+      }
+      & .slide-tittle-year {
+        bottom: 5rem;
+        padding: 0rem 0.5rem;
+        h3 {
+          font-size: 2rem;
+        }
+        h5{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

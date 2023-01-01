@@ -1,0 +1,202 @@
+@import "../../styles/_variables.scss";
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 3rem;
+  background-color: $color-black;
+  & .footer-logoSection {
+    width: 40%;
+    font-family: "Candara";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+
+    color: $color-primary-light;
+    & .footer-logo {
+      width: 180px;
+      & img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    & .footer-newsletterBTN {
+      padding: 2rem 0rem;
+      & a {
+        text-decoration: none;
+        border: 1px solid $color-primary-light;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 1.5rem 2rem;
+        background-color: $color-primary-dark;
+        color: $color-primary-light;
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          background-color: $color-primary-light;
+          color: $color-primary-dark;
+        }
+      }
+      & p {
+        padding: 3.8rem 0rem;
+      }
+    }
+    .footer-aboutLine{
+      margin-top: 107px;
+    }
+  }
+  & .footer-section2 {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    & .footer-exploreSection,
+    .footer-contactSection {
+      padding: 2rem 4rem;
+      height: 100%;
+      text-align: left;
+
+      & h2 {
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 31px;
+        /* identical to box height */
+        padding: 2rem 0rem;
+        letter-spacing: 0.02em;
+
+        color: $color-primary-light;
+      }
+      & ul,
+      p {
+        font-family: "Candara";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        padding-left: 0.25rem;
+
+        color: $color-primary-light;
+        a{
+          text-decoration: none;
+          color: $color-primary-light; 
+        }
+      }
+      & .footer-privacyLine {
+        & p {
+          padding-top: 6rem;
+        }
+      }
+    }
+    & .footer-contactSection {
+      & .footer-tedLine {
+        & p {
+          padding-top: 18rem;
+        }
+      }
+      .icons{
+        margin-top: 50px;
+        ul{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          li{
+            margin: 0px 9px;
+
+            a{
+              img{
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    & .footer-logoSection {
+      width: 100%;
+      text-align: center;
+      & .footer-logo {
+        margin: 0 auto;
+        margin-bottom: 37px;
+      }
+      & .footer-newsletterBTN {
+        padding: 0rem 0rem;
+        & a {
+          padding: 1rem 1.5rem;
+        }
+        & p {
+          line-height: 31px;
+          margin-top: 18px;
+          padding: 0rem 0rem;
+        }
+      }
+      & .footer-aboutLine {
+        padding: 1rem 0rem;
+        margin-top: 10px;
+      }
+    }
+    & .footer-section2 {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      & .footer-exploreSection,
+      .footer-contactSection {
+        text-align: center;
+        width: 100%;
+        padding: 2rem 0rem;
+        & h2 {
+          padding: 0rem 0rem;
+        }
+        & ul,
+        p {
+          padding-left: 0rem;
+        }
+        & .footer-privacyLine {
+          & p {
+            padding-top: 0rem;
+          }
+        }
+      }
+      & .footer-contactSection {
+        & .footer-tedLine {
+          & p {
+            padding-top: 0rem;
+          }
+        }
+        .icons{
+          ul{
+
+            justify-content: center;
+            li{
+              margin: 0px 15px;
+
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

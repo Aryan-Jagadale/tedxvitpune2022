@@ -1,0 +1,92 @@
+@import "../../../styles/_variables";
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6rem 3rem;
+  & h2 {
+    font-family: $font-text;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41px;
+    font-size: 24px;
+    color: $color-primary-light;
+  }
+  & .about-inner-container {
+    font-family: 'Candara';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 159.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0rem 8rem;
+    padding-top: 3rem;
+    /* or 37px */
+
+    letter-spacing: 0.1em;
+
+    color: $color-primary-light;
+    & .about-section2 {
+      display: flex;
+      flex-direction: row;
+      padding: 4rem 3rem;
+      & .about-tedSection,
+      .about-tedxSection {
+        padding: 0rem 2rem;
+        & h4 {
+          font-family: $font-text;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 159.5%;
+          /* or 32px */
+
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    & .about-section3 {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      a {
+        color: $color-primary-light;
+        font-family: "Candara";
+        font-style: normal;
+        font-weight: 300;
+      }
+    }
+  }
+}
+@media screen and (max-width: $medium) {
+  .about-container {
+    justify-content: left;
+    align-items: flex-start;
+    padding: 3.5rem 1.5rem;
+    & h2 {
+      padding-bottom: 1rem;
+    }
+    & .about-inner-container {
+      margin: 1rem 0rem;
+      padding-top: 1rem;
+      font-size: 15px;
+      & .about-section2 {
+        padding: 1rem 0rem;
+        flex-direction: column;
+        & .about-tedSection,
+        .about-tedxSection {
+          padding: 1rem 0rem;
+          & h4 {
+            font-size: 15px;
+          }
+        }
+      }
+      &.about-section3 {
+        text-align: center;
+      }
+    }
+  }
+}

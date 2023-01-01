@@ -1,0 +1,63 @@
+@import "../../../styles/_variables";
+
+.countdown-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1.5rem 6rem;
+  & .subCountainerLf {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    & p {
+      width: 50%;
+      font-family: $font-text;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 43px;
+      line-height: 124.5%;
+    }
+    .img_container{
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+    }
+    
+  }
+  
+}
+
+
+@media (max-width: $medium) {
+
+  .countdown-container {
+    padding: 1.5rem 4rem;
+    
+    & .subCountainerLf {
+      
+      flex-direction: column;
+      justify-content: center;
+      & p {
+        width: 100%;
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 124.5%;
+        text-align: center;
+      }
+      .img_container{
+        margin: 0 auto;
+        img{
+          width: 100%;
+        }
+      }
+      
+    }
+    
+  }
+  
+}
+
